@@ -1,0 +1,6 @@
+style "user-font" {
+  font_name="Bitstream Vera Sans 8"
+}
+widget_class "*" style "user-font"
+gtk-font-name="Bitstream Vera Sans 8"
+
