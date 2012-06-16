@@ -5,9 +5,11 @@
 ! Font
 !xterm*font: -schumacher-clean-medium-r-normal-*-12-120-75-75-c-60-iso10646-1
 !xterm*geometry: 100x41
-xterm*font: -*-proggytinyttsz-medium-*-*-*-*-*-*-*-*-*-*-*
+!xterm*font: -*-proggytinyttsz-medium-*-*-*-*-*-*-*-*-*-*-*
+xterm*faceName: ProggyTinySZ
+xterm*faceSize: 8
 
-Xft*dpi: 96
+!Xft*dpi: 96
 !!! Profont is not bad, but I lose vertical over proggytiny and it has no ASCII Drawing characters
 !xterm*font: -*-profont-*-*-*-*-12-*-*-*-*-*-*-*
 
