@@ -1,0 +1,37 @@
+set mainfont {{Droid Sans} 9}
+set textfont {ProggyCleanSZ.pcf 9}
+set uifont {{Droid Sans} 9 bold}
+set tabstop 4
+set findmergefiles 0
+set maxgraphpct 50
+set maxwidth 16
+set cmitmode patch
+set wrapcomment none
+set autoselect 1
+set autosellen 40
+set showneartags 1
+set hideremotes 0
+set showlocalchanges 1
+set datetimeformat {%Y-%m-%d %H:%M:%S}
+set limitdiffs 1
+set uicolor #1f1f1f
+set want_ttk 1
+set bgcolor #1f1f1f
+set fgcolor #dcdccc
+set colors {green red blue magenta darkgrey brown orange}
+set diffcolors {{#705050} #60b48a #506070}
+set markbgcolor #3f3f3f
+set diffcontext 3
+set selectbgcolor #3f3f3f
+set extdifftool meld
+set perfile_attrs 0
+set geometry(main) 1350x639+124+114
+set geometry(state) normal
+set geometry(topwidth) 1350
+set geometry(topheight) 352
+set geometry(pwsash0) "752 1"
+set geometry(pwsash1) "1171 1"
+set geometry(botwidth) 1057
+set geometry(botheight) 282
+set permviews {{{All branches} {} {--branches --tags} {}}
+}
