@@ -1,4 +1,4 @@
-:autocmd LocationChange .* :js modes.passAllKeys = /www\.google\.com\/reader/.test(buffer.URL) || /mail\.google\.com/.test(buffer.URL)
+:autocmd LocationChange .* :js modes.passAllKeys = /www\.google\.com\/reader/.test(buffer.URL) || /mail\.google\.com/.test(buffer.URL) || /workflowy\.com/.test(buffer.URL)
 :set pps=resized,tab
 :set gui toolbars=nomenu,nobookmarks,nonavigation,tabs
 
