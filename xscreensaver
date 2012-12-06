@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.14 for sarumont on Mon May  7 08:30:32 2012.
+# Written by xscreensaver-demo 5.15 for sarumont on Wed Oct 17 16:42:32 2012.
 # http://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -241,6 +241,9 @@ programs:								      \
 - GL: 				skytentacles -root			    \n\
 - GL: 				rubikblocks -root			    \n\
 				unicode -root				    \n\
+- GL: 				companioncube -root			    \n\
+- GL: 				hilbert -root				    \n\
+- GL: 				tronbit -root				    \n\
 
 
 pointerPollTime:    0:00:05
