@@ -30,12 +30,15 @@ xterm*termName:  xterm-256color
 !
 ! URxvt*font: xft:ProggyTinyTTSZ:size=12
 ! URxvt*boldFont: xft:ProggyTinyTTSZ:size=12:style=Bold
-! URxvt*font: xft:SourceCodePro-Regular:pixelsize=11:antialias=true:hinting=true
-! URxvt*boldFont: xft:SourceCodePro-Bold:pixelsize=11:antialias=true:hinting=true
 
-URxvt*font: xft:Inconsolata:size=9
-URxvt*boldFont: xft:Inconsolata:size=9:style=bold
-URxvt*letterSpace: -1
+! URxvt*font: xft:Inconsolata:size=9
+! URxvt*boldFont: xft:Inconsolata:size=9:style=bold
+! URxvt*letterSpace: -1
+
+URxvt*font: xft:SourceCodePro-Regular:size=8.5
+URxvt*boldFont: xft:SourceCodePro-Bold:size=8.5
+URxvt*letterSpace: -2
+
 URxvt*iso14755: False
 
 ! general config
