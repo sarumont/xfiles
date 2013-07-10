@@ -41,6 +41,7 @@ URxvt*boldFont: xft:SourceCodePro-Bold:size=8.5
 URxvt*letterSpace: -2
 
 URxvt*iso14755: False
+URxvt*pointerBlank: true
 
 ! general config
 *cutToBeginningOfLine: false
