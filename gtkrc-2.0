@@ -1,6 +1,2 @@
-# -- THEME AUTO-WRITTEN DO NOT EDIT
-include "/home/sarumont/.common/X/themes/Divinorum/gtk-2.0/gtkrc"
-
-include "/home/sarumont/.common/X/gtkrc.mine"
-
-# -- THEME AUTO-WRITTEN DO NOT EDIT
+gtk-theme-name = "OMG-Dark"
+include "/home/sarumont/.xfiles/gtkrc.mine"
