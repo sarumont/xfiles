@@ -46,7 +46,6 @@ URxvt*pointerBlank: true
 ! general config
 *cutToBeginningOfLine: false
 *charClass: 33:48,37-38:48,45-47:48,58:48,61:48,63:48
-*loginShell: true
 *saveLines: 10000
 *scrollBar: false
 
