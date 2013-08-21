@@ -1,17 +1,5 @@
 #!/bin/sh
-
-#exec xmodmap -e "keycode 140 = XF86AudioMute" &
-exec setxkbmap -option ctrl:nocaps &
-#exec xcompmgr &
-exec xscreensaver &
-exec xset r rate 250 100 &
-
-# need this for #define to work, apparently
-exec xrdb -merge ~/.Xdefaults &
-/home/sarumont/.dropbox-dist/dropbox start &
-
-if test -f ~/.local/X/xinitrc; then
-	. ~/.local/X/xinitrc
+if test -f ~/.xprofile; then
+	. ~/.xprofile
 fi
-
 exec awesome
