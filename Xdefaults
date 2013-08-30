@@ -35,10 +35,9 @@ xterm*termName:  xterm-256color
 ! URxvt*boldFont: xft:Inconsolata:size=9:style=bold
 ! URxvt*letterSpace: -1
 
-URxvt*cutchars: "'()*,<>[]{}|│┤├
-URxvt*font: xft:SourceCodePro-Regular:size=8.5
-URxvt*boldFont: xft:SourceCodePro-Bold:size=8.5
-URxvt*letterSpace: -2
+URxvt*cutchars: ;()*,<>[]{}|│┤├"'
+URxvt*font: xft:SourceCodePro:pixelsize=11:antialias=true:hinting=true
+URxvt*boldFont: xft:SourceCodePro:bold:pixelsize=11:antialias=true:hinting=true
 
 URxvt*iso14755: False
 URxvt*pointerBlank: true
