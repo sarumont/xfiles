@@ -13,6 +13,8 @@ Xft.rgba: rgb
 !xterm*font: -*-proggytinysz-medium-*-*-*-*-*-*-*-*-*-*-*
 *faceName: SourceCodeProForPowerline
 *faceSize: 8
+!*faceName: InconsolataForPowerline
+!*faceSize: 9
 
 !xterm*boldFont: -*-proggytinyttsz-bold-*-*-*-*-*-*-*-*-*-*-*
 !xterm*boldMode: true
@@ -37,8 +39,6 @@ URxvt*font: xft:SourceCodeProForPowerline:pixelsize=10
 !URxvt*italicFont: xft:SourceCodePro:italic:pixelsize=11
 !URxvt*boldItalicFont: xft:SourceCodePro:BoldItalic:pixelsize=11
 
-!URxvt*font: xft:InconsolataForPowerline:pixelsize=12
-
 URxvt*iso14755: False
 URxvt*pointerBlank: true
 
@@ -48,22 +48,22 @@ URxvt*pointerBlank: true
 *saveLines: 10000
 *scrollBar: false
 
-! Zenburn colors
-*background: #1f1f1f
-*foreground: #dcdccc
-*color0:      #1E2320
-*color1:      #705050
-*color2:      #60b48a
-*color3:      #dfaf8f
-*color4:      #506070
-*color5:      #dc8cc3
-*color6:      #8cd0d3
-*color7:      #dcdccc
-*color8:      #709080
-*color9:      #dca3a3
-*color10:     #c3bf9f
-*color11:     #f0dfaf
-*color12:     #94bff3
-*color13:     #ec93d3
-*color14:     #93e0e3
+! ir_black colors
+*color0:      #4e4e4e
+*color1:      #ff6c60
+*color2:      #a8ff60
+*color3:      #ffffb6
+*color4:      #96cbfe
+*color5:      #ff73fd
+*color6:      #c6c5fe
+*color7:      #eeeeee
+*color8:      #7c7c7c
+*color9:      #ffb6b0
+*color10:     #ceffab
+*color11:     #ffffcb
+*color12:     #b5dcfe
+*color13:     #ff9cfe
+*color14:     #dfdffe
 *color15:     #ffffff
+*background: gray10
+*foreground: #eeeeee
