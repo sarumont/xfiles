@@ -11,9 +11,8 @@ Xft.rgba: rgb
 
 ! xterm
 !xterm*font: -*-proggytinysz-medium-*-*-*-*-*-*-*-*-*-*-*
-!xterm*faceName: SourceCodePro
-xterm*faceName: Inconsolata
-xterm*faceSize: 6
+xterm*faceName: SourceCodeProForPowerline
+xterm*faceSize: 8
 
 !xterm*boldFont: -*-proggytinyttsz-bold-*-*-*-*-*-*-*-*-*-*-*
 !xterm*boldMode: true
@@ -24,19 +23,19 @@ xterm*termName:  xterm-256color
 
 ! urxvt
 
-! URxvt*font: xft:Inconsolata:size=9
-! URxvt*boldFont: xft:Inconsolata:size=9:style=bold
+URxvt*font: xft:Inconsolata:pixelsize=10
+URxvt*boldFont: xft:Inconsolata:Bold
 
 URxvt*cutchars: ;()*,<>[]{}|│┤├"'
 
 !URxvt*font: xft:SourceCodePro:pixelsize=11
 !URxvt*boldFont: xft:SourceCodePro:bold:pixelsize=11
 
-URxvt*letterSpace: -2
-URxvt*font: xft:PowerlineSymbols:pixelsize=11,xft:SourceCodePro:pixelsize=11
-URxvt*boldFont: xft:SourceCodePro:bold:pixelsize=11
-URxvt*italicFont: xft:SourceCodePro:italic:pixelsize=11
-URxvt*boldItalicFont: xft:SourceCodePro:BoldItalic:pixelsize=11
+!URxvt*letterSpace: -2
+URxvt*font: xft:PowerlineSymbols,xft:SourceCodePro:pixelsize=11
+!URxvt*boldFont: xft:SourceCodePro:bold:pixelsize=11
+!URxvt*italicFont: xft:SourceCodePro:italic:pixelsize=11
+!URxvt*boldItalicFont: xft:SourceCodePro:BoldItalic:pixelsize=11
 
 !URxvt*font: xft:InconsolataForPowerline:pixelsize=12
 
