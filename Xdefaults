@@ -5,39 +5,40 @@ Xcursor.theme: PolarCursorTheme-Blue
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: full
-Xft.hintstyle: hintslight
+Xft.hintstyle: hintfull
+Xft.autohint: true
 Xft.rgba: rgb
 
 ! xterm
 !xterm*font: -*-proggytinysz-medium-*-*-*-*-*-*-*-*-*-*-*
+!xterm*faceName: SourceCodePro
 xterm*faceName: Inconsolata
-xterm*faceSize: 8
+xterm*faceSize: 6
 
-xterm*boldFont: -*-proggytinyttsz-bold-*-*-*-*-*-*-*-*-*-*-*
-xterm*boldMode: true
+!xterm*boldFont: -*-proggytinyttsz-bold-*-*-*-*-*-*-*-*-*-*-*
+!xterm*boldMode: true
 
 xterm*ttyModes: erase 
 xterm*backarrowKey: false
 xterm*termName:  xterm-256color
 
 ! urxvt
-! URxvt*font: -*-proggytinysz-regular-*-*-*-*-*-*-*-*-*-*-*
-! URxvt*font: -*-proggytinysz-medium-r-normal-*-10-*-*-*-*-*-*-*
-! URxvt*boldFont: -*-proggytinysz-bold-r-normal-*-10-*-*-*-*-*-*-*
-! URxvt*font: -*-proggytinysz-medium-*-*-*-10-*-*-*-*-*-*-*
-! URxvt*font: xft:SourceCodePro-Regular:antialias=true:hinting=true
-! URxvt*font: -*-proggytinysz-medium-*-*-*-17-120-*-*-*-*-*-*
-!
-! URxvt*font: xft:ProggyTinyTTSZ:size=12
-! URxvt*boldFont: xft:ProggyTinyTTSZ:size=12:style=Bold
 
 ! URxvt*font: xft:Inconsolata:size=9
 ! URxvt*boldFont: xft:Inconsolata:size=9:style=bold
-! URxvt*letterSpace: -1
 
 URxvt*cutchars: ;()*,<>[]{}|│┤├"'
-URxvt*font: xft:SourceCodePro:pixelsize=11:antialias=true:hinting=true
-URxvt*boldFont: xft:SourceCodePro:bold:pixelsize=11:antialias=true:hinting=true
+
+!URxvt*font: xft:SourceCodePro:pixelsize=11
+!URxvt*boldFont: xft:SourceCodePro:bold:pixelsize=11
+
+URxvt*letterSpace: -2
+URxvt*font: xft:PowerlineSymbols:pixelsize=11,xft:SourceCodePro:pixelsize=11
+URxvt*boldFont: xft:SourceCodePro:bold:pixelsize=11
+URxvt*italicFont: xft:SourceCodePro:italic:pixelsize=11
+URxvt*boldItalicFont: xft:SourceCodePro:BoldItalic:pixelsize=11
+
+!URxvt*font: xft:InconsolataForPowerline:pixelsize=12
 
 URxvt*iso14755: False
 URxvt*pointerBlank: true
@@ -67,4 +68,3 @@ URxvt*pointerBlank: true
 *color13:     #ec93d3
 *color14:     #93e0e3
 *color15:     #ffffff
-

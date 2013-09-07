@@ -6,7 +6,7 @@ exec xscreensaver &
 exec xset r rate 250 100 &
 
 # need this for #define to work, apparently
-exec xrdb -merge ~/.Xdefaults &
+exec xrdb -load ~/.Xdefaults &
 /home/sarumont/.dropbox-dist/dropbox start &
 
 if test -f ~/.local/X/xinitrc; then
