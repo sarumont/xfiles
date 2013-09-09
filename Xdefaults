@@ -65,5 +65,5 @@ URxvt*pointerBlank: true
 *color13:     #ff9cfe
 *color14:     #dfdffe
 *color15:     #ffffff
-*background: gray10
+*background: #1c1c1c
 *foreground: #eeeeee
