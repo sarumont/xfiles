@@ -1,3 +1,9 @@
 [submodule "fonts/powerline-fonts"]
 	path = fonts/powerline-fonts
 	url = git@github.com:Lokaltog/powerline-fonts.git
+[submodule "awesome/tyrannical"]
+	path = awesome/tyrannical
+	url = git@github.com:sarumont/tyrannical.git
+[submodule "awesome/vicious"]
+	path = awesome/vicious
+	url = http://git.sysphere.org/vicious
