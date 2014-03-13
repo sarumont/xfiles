@@ -117,7 +117,7 @@ tyrannical.tags = {
 		init = false,
 		exclusive = false,
 		layout = awful.layout.suit.floating,
-		class = {"VirtualBox"}
+		class = {"VirtualBox", "Vmplayer"}
 	},
 	{
 		name = "comm",
