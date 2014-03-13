@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=wmname
+GenericName=File Synchronizer
+Exec=/usr/bin/wmname LG3D
+Terminal=false
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true

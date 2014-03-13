@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=synclient2
+Exec=/usr/bin/synclient TapButton2=2
+Terminal=false
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true

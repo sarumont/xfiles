@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=display_switch
+Exec=/home/sarumont/.dotfiles/bin/display_switch
+Terminal=false
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true
