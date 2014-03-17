@@ -12,7 +12,7 @@ Xft.rgba: rgb
 ! xterm
 !xterm*font: -*-proggytinysz-medium-*-*-*-*-*-*-*-*-*-*-*
 *faceName: SourceCodeProForPowerline
-*faceSize: 8
+*faceSize: 10
 !*faceName: InconsolataForPowerline
 !*faceSize: 9
 
