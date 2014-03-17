@@ -226,7 +226,7 @@ memicon:set_image(beautiful.mem)
 
 -- volume
 volume = wibox.widget.textbox()
-vicious.register(volume, vicious.widgets.volume, '<span color="#AAAAAA" background="#1F2428">$1</span> ', 0.5, "both_volume")
+vicious.register(volume, vicious.widgets.volume, '<span color="#AAAAAA" background="#1F2428">$1</span> ', 0.5, "Master")
 
 volumeicon = wibox.widget.imagebox()
 vicious.register(volumeicon, vicious.widgets.volume, function(widget, args)
@@ -241,7 +241,7 @@ vicious.register(volumeicon, vicious.widgets.volume, function(widget, args)
 		else
 			volumeicon:set_image(beautiful.music)
 		end
-end, 0.3, "both_volume")
+end, 0.3, "Master")
 
 -- mpd
 mpdwidget = wibox.widget.textbox()
@@ -400,6 +400,7 @@ globalkeys = awful.util.table.join(
     awful.key({}, "XF86AudioPrev", function () awful.util.spawn( "mpc prev" ) end ),
     awful.key({}, "XF86AudioNext", function () awful.util.spawn( "mpc next" ) end ),
     awful.key({}, "XF86AudioPlay", function () awful.util.spawn( "mpc toggle" ) end ),
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn( "amixer set Capture toggle" ) end ),
 
 	awful.key({modkey}, "=", function () 
 		awful.util.spawn( "mixer_ctl up 5" )
@@ -457,6 +458,10 @@ awful.rules.rules = {
                      focus = awful.client.focus.filter,
                      keys = clientkeys,
                      buttons = clientbuttons } },
+    { rule = { instance = "plugin-container" },
+      properties = { floating = true } },
+    { rule = { class = "Android SDK Manager" },
+      properties = { floating = true } },
     { rule = { class = "MPlayer" },
       properties = { floating = true } },
     { rule = { class = "pinentry" },
