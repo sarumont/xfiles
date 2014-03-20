@@ -10,14 +10,8 @@ Xft.autohint: true
 Xft.rgba: rgb
 
 ! xterm
-!xterm*font: -*-proggytinysz-medium-*-*-*-*-*-*-*-*-*-*-*
 *faceName: SourceCodeProForPowerline
-*faceSize: 10
-!*faceName: InconsolataForPowerline
-!*faceSize: 9
-
-!xterm*boldFont: -*-proggytinyttsz-bold-*-*-*-*-*-*-*-*-*-*-*
-!xterm*boldMode: true
+*faceSize: 8
 
 *ttyModes: erase 
 *backarrowKey: false
@@ -65,5 +59,5 @@ URxvt*pointerBlank: true
 *color13:     #ff9cfe
 *color14:     #dfdffe
 *color15:     #ffffff
-*background: #1c1c1c
+*background: #000000
 *foreground: #eeeeee
