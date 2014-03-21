@@ -212,8 +212,14 @@ cpuicon = wibox.widget.imagebox()
 cpuicon:set_image(beautiful.cpu)
 
 -- cpufreq
---cpufreqwidget = wibox.widget.textbox()
---vicious.register(cpufreqwidget, vicious.widgets.cpufreq, "$1MHz", 30, "cpu0")
+cpufreq0 = wibox.widget.textbox()
+vicious.register(cpufreq0, vicious.widgets.cpufreq, "[$2 ", 5, "cpu0")
+cpufreq1 = wibox.widget.textbox()
+vicious.register(cpufreq1, vicious.widgets.cpufreq, "$2 ", 5, "cpu1")
+cpufreq2 = wibox.widget.textbox()
+vicious.register(cpufreq2, vicious.widgets.cpufreq, "$2 ", 5, "cpu2")
+cpufreq3 = wibox.widget.textbox()
+vicious.register(cpufreq3, vicious.widgets.cpufreq, "$2]", 5, "cpu3")
 
 -- RAM
 memwidget = wibox.widget.textbox()
@@ -226,7 +232,7 @@ memicon:set_image(beautiful.mem)
 
 -- volume
 volume = wibox.widget.textbox()
-vicious.register(volume, vicious.widgets.volume, '<span color="#AAAAAA" background="#1F2428">$1</span> ', 0.5, "Master")
+vicious.register(volume, vicious.widgets.volume, '<span color="#AAAAAA" background="#1F2428">$1</span> ', 0.5, "both_volume")
 
 volumeicon = wibox.widget.imagebox()
 vicious.register(volumeicon, vicious.widgets.volume, function(widget, args)
@@ -241,7 +247,7 @@ vicious.register(volumeicon, vicious.widgets.volume, function(widget, args)
 		else
 			volumeicon:set_image(beautiful.music)
 		end
-end, 0.3, "Master")
+end, 0.3, "both_volume")
 
 -- mpd
 mpdwidget = wibox.widget.textbox()
@@ -301,7 +307,10 @@ for s=1,screen.count() do
     right_layout:add(arrl_dl)
     right_layout:add(cpuicon)
     right_layout:add(cpuwidget)
-    --right_layout:add(cpufreqwidget)
+	right_layout:add(cpufreq0)
+	right_layout:add(cpufreq1)
+	right_layout:add(cpufreq2)
+	right_layout:add(cpufreq3)
 
     right_layout:add(arrl_ld)
     right_layout:add(memicon)
