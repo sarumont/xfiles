@@ -164,6 +164,9 @@ tyrannical.settings.group_children = true --Force popups/dialogs to have the sam
 --
 -- Wibox
 --
+function format_freq(widget, args)
+	return string.format("%04d ", args[1])
+end
 
 -- separators
 arrl = wibox.widget.imagebox()
@@ -207,26 +210,33 @@ cpuwidget = wibox.widget.textbox()
 vicious.register(
 	cpuwidget,
 	vicious.widgets.cpu,
-	'<span background="#1F2428" color="#AAAAAA">$1%</span> ', 5)
+	function(widget, args)
+		return '<span background="#1F2428" color="#AAAAAA">' .. string.format("%02d", args[1]) .. '%</span> '
+	end,
+	5)
 cpuicon = wibox.widget.imagebox()
 cpuicon:set_image(beautiful.cpu)
 
 -- cpufreq
+
 cpufreq0 = wibox.widget.textbox()
-vicious.register(cpufreq0, vicious.widgets.cpufreq, "[$2 ", 5, "cpu0")
+vicious.register(cpufreq0, vicious.widgets.cpufreq, format_freq, 5, "cpu0")
 cpufreq1 = wibox.widget.textbox()
-vicious.register(cpufreq1, vicious.widgets.cpufreq, "$2 ", 5, "cpu1")
+vicious.register(cpufreq1, vicious.widgets.cpufreq, format_freq, 5, "cpu1")
 cpufreq2 = wibox.widget.textbox()
-vicious.register(cpufreq2, vicious.widgets.cpufreq, "$2 ", 5, "cpu2")
+vicious.register(cpufreq2, vicious.widgets.cpufreq, format_freq, 5, "cpu2")
 cpufreq3 = wibox.widget.textbox()
-vicious.register(cpufreq3, vicious.widgets.cpufreq, "$2]", 5, "cpu3")
+vicious.register(cpufreq3, vicious.widgets.cpufreq, format_freq, 5, "cpu3")
 
 -- RAM
 memwidget = wibox.widget.textbox()
 vicious.register(
 	memwidget,
 	vicious.widgets.mem,
-	'<span background="#313131" color="#AAAAAA">$1% </span>', 20)
+	function(widget, args)
+		return '<span background="#313131" color="#AAAAAA">' .. string.format("%02d", args[1]) .. '% </span>'
+	end,
+	20)
 memicon = wibox.widget.imagebox()
 memicon:set_image(beautiful.mem)
 
