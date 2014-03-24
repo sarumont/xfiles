@@ -19,7 +19,7 @@ table5={
 
    -- vms
    ["w"]={"VBoxManage startvm --type gui \"Windows 8 x64\"", "Windows 8 x64", "name"},
-   ["o"]={"VBoxManage startvm --type gui \"Mac OS X\"", "Mac OS X", "name"},
+   ["o"]={"vmplayer \"/home/sarumont/vmware/Mac OS X 10.9/Mac OS X 10.9.vmx\"", "Mac OS X", "name"},
 
    --, "instance"},
    --["x"]={"xterm","xterm", "instance"}, 
