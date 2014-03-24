@@ -218,7 +218,6 @@ cpuicon = wibox.widget.imagebox()
 cpuicon:set_image(beautiful.cpu)
 
 -- cpufreq
-
 cpufreq0 = wibox.widget.textbox()
 vicious.register(cpufreq0, vicious.widgets.cpufreq, format_freq, 5, "cpu0")
 cpufreq1 = wibox.widget.textbox()
@@ -242,7 +241,7 @@ memicon:set_image(beautiful.mem)
 
 -- volume
 volume = wibox.widget.textbox()
-vicious.register(volume, vicious.widgets.volume, '<span color="#AAAAAA" background="#1F2428">$1</span> ', 0.5, "both_volume")
+vicious.register(volume, vicious.widgets.volume, '<span color="#AAAAAA" background="#1F2428">$1</span> ', 0.5, "Master")
 
 volumeicon = wibox.widget.imagebox()
 vicious.register(volumeicon, vicious.widgets.volume, function(widget, args)
@@ -257,7 +256,7 @@ vicious.register(volumeicon, vicious.widgets.volume, function(widget, args)
 		else
 			volumeicon:set_image(beautiful.music)
 		end
-end, 0.3, "both_volume")
+end, 0.3, "Master")
 
 -- mpd
 mpdwidget = wibox.widget.textbox()
@@ -419,25 +418,25 @@ globalkeys = awful.util.table.join(
     awful.key({}, "XF86AudioPrev", function () awful.util.spawn( "mpc prev" ) end ),
     awful.key({}, "XF86AudioNext", function () awful.util.spawn( "mpc next" ) end ),
     awful.key({}, "XF86AudioPlay", function () awful.util.spawn( "mpc toggle" ) end ),
-    awful.key({}, "XF86AudioMute", function () awful.util.spawn( "amixer set Capture toggle" ) end ),
+    --awful.key({}, "XF86AudioMute", function () awful.util.spawn( "amixer set Capture toggle" ) end ),
 
 	awful.key({modkey}, "=", function () 
-		awful.util.spawn( "mixer_ctl up 5" )
+		awful.util.spawn( "pulse_mixer_ctl plus" )
 		naughty.notify( { text = "volume up", timeout = 1 })
 	end ), 
 
     awful.key({modkey}, "-", function () 
-		awful.util.spawn( "mixer_ctl down 5" )
+		awful.util.spawn( "pulse_mixer_ctl minus" )
 		naughty.notify( { text = "volume down", timeout = 1 })
 	end ),
 
     awful.key({}, "XF86AudioRaiseVolume", function () 
-		awful.util.spawn( "mixer_ctl up 5" )
+		awful.util.spawn( "pulse_mixer_ctl plus" )
 		naughty.notify( { text = "volume up", timeout = 1 })
 	end ),
 
     awful.key({}, "XF86AudioLowerVolume", function () 
-		awful.util.spawn( "mixer_ctl down 5" )
+		awful.util.spawn( "pulse_mixer_ctl minus" )
 		naughty.notify( { text = "volume down", timeout = 1 })
 	end )
 )
