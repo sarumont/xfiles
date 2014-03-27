@@ -2,7 +2,6 @@
 Xcursor.theme: PolarCursorTheme-Blue
 
 ! fonts
-Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: full
 Xft.hintstyle: hintfull
