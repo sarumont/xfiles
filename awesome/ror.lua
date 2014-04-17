@@ -14,8 +14,8 @@ table5={
    ["g"]={"google-chrome", "Google-chrome"}, 
    ["f"]={"firefox", "^Firefox$"}, 
    ["t"]={"thunderbird", "^Thunderbird$"}, 
-   ["d"]={"/usr/local/bin/st -c dev -e tmux_attach dev", "dev", "instance"},
-   ["m"]={"/usr/local/bin/st -c main -e tmux_attach main", "main", "instance"},
+   ["d"]={"/home/sarumont/.dotfiles/bin/st-term -c dev -e tmux_attach dev", "dev", "instance"},
+   ["m"]={"/home/sarumont/.dotfiles/bin/st-term -c main -e tmux_attach main", "main", "instance"},
 
    -- vms
    ["w"]={"VBoxManage startvm --type gui \"Windows 8 x64\"", "Windows 8 x64", "name"},
