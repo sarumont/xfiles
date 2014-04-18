@@ -383,7 +383,7 @@ globalkeys = awful.util.table.join(
     awful.key({"Control", "Mod1"}, "j", function () awful.client.swap.bydirection("down") end),
     awful.key({"Control", "Mod1"}, "l", function () awful.client.swap.bydirection("right") end),
     awful.key({"Control", "Mod1"}, "h", function () awful.client.swap.bydirection("left") end),
-    awful.key({"Mod4"}, "l", function () awful.util.spawn( "xscreensaver-command -lock" ) end ),
+    awful.key({"Mod4"}, "l", function () awful.util.spawn( "slimlock" ) end ),
 
     awful.key({modkey}, "u", awful.client.urgent.jumpto),
     awful.key({modkey}, "Tab",
