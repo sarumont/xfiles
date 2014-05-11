@@ -86,7 +86,7 @@ tyrannical.tags = {
         init = true,
         exclusive = true,
         layout = awful.layout.suit.max.fullscreen,
-        class = {"dev", "Eclipse", "jetbrains.idea"}
+        class = {"dev", "Eclipse", "jetbrains.idea", "jetbrains-android-studio"}
     },
     {
         name = "main",
@@ -521,7 +521,10 @@ client.connect_signal("manage", function (c, startup)
         end
     end
 
-    local titlebars_enabled = ("Wine" ~= c.class) and ( awful.client.floating.get( c ) or "ConversationsWindow" == c.role )
+    local titlebars_enabled = 
+			("Wine" ~= c.class) and 
+			("Screenruler" ~= c.class) and
+			(awful.client.floating.get( c ) or "ConversationsWindow" == c.role)
     if titlebars_enabled and (c.type == "normal" or c.type == "dialog") then
         -- buttons for the titlebar
         local buttons = awful.util.table.join(
