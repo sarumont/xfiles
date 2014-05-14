@@ -86,14 +86,16 @@ tyrannical.tags = {
         init = true,
         exclusive = true,
         layout = awful.layout.suit.max.fullscreen,
-        class = {"dev", "Eclipse", "jetbrains.idea", "jetbrains-android-studio"}
+        class = {"Eclipse", "jetbrains.idea", "jetbrains-android-studio"},
+		instance = {"dev"}
     },
     {
         name = "main",
         init = false,
         exclusive = false,
         layout = awful.layout.suit.max,
-        class = {"main", "Thunderbird"}
+        class = {"Thunderbird"},
+        instance = {"main"}
     },
     {
         name        = "term",                 -- Call the tag "Term"
