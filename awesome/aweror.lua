@@ -25,81 +25,81 @@ local USE_T = true
 local aweror = {}
 
 function aweror.run_or_raise(cmd, properties)
-   local clients = client.get()
-   local focused = awful.client.next(0)
-   local findex = 0
-   local matched_clients = {}
-   local n = 0
-   for i, c in pairs(clients) do
-      --make an array of matched clients
-      if match(properties, c) then
-         n = n + 1
-         matched_clients[n] = c
-         if c == focused then
-            findex = n
-         end
-      end
-   end
-   if n > 0 then
-      local c = matched_clients[1]
-      -- if the focused window matched switch focus to next in list
-      if 0 < findex and findex < n then
-         c = matched_clients[findex+1]
-      end
-      local ctags = c:tags()
-      if #ctags == 0 then
-         -- ctags is empty, show client on current tag
-         local curtag = awful.tag.selected()
-         awful.client.movetotag(curtag, c)
-      else
-         -- Otherwise, pop to first tag client is visible on
-         awful.tag.viewonly(ctags[1])
-      end
-      -- And then focus the client
-      client.focus = c
-      c:raise()
-      return
-   end
-   awful.util.spawn(cmd)
+	local clients = client.get()
+	local focused = awful.client.next(0)
+	local findex = 0
+	local matched_clients = {}
+	local n = 0
+	for i, c in pairs(clients) do
+		--make an array of matched clients
+		if aweror.match(properties, c) then
+			n = n + 1
+			matched_clients[n] = c
+			if c == focused then
+				findex = n
+			end
+		end
+	end
+	if n > 0 then
+		local c = matched_clients[1]
+		-- if the focused window matched switch focus to next in list
+		if 0 < findex and findex < n then
+			c = matched_clients[findex+1]
+		end
+		local ctags = c:tags()
+		if #ctags == 0 then
+			-- ctags is empty, show client on current tag
+			local curtag = awful.tag.selected()
+			awful.client.movetotag(curtag, c)
+		else
+			-- Otherwise, pop to first tag client is visible on
+			awful.tag.viewonly(ctags[1])
+		end
+		-- And then focus the client
+		client.focus = c
+		c:raise()
+		return
+	end
+	awful.util.spawn(cmd)
 end
 
 -- Returns true if all pairs in table1 are present in table2
-function match (table1, table2)
-   for k, v in pairs(table1) do
-      if table2[k] == nil or (table2[k] ~= v and not table2[k]:find(v)) then
-         return false
-      end
-   end
-   return true
+function aweror.match (table1, table2)
+	for k, v in pairs(table1) do
+		if table2[k] == nil or (table2[k] ~= v and not table2[k]:find(v)) then
+			return false
+		end
+	end
+	return true
 end
 
 function genfun(t3)
-   local cmd=t3[1]
-   local rule=t3[2]
-   local flag=t3[3]
-   local table1={}
-   s1="class"
-   if flag then
-     s1=flag
-   end
-   table1[s1]=rule
-   return function()
-     aweror.run_or_raise(cmd,table1)
-   end
+	local cmd=t3[1]
+	local rule=t3[2]
+	local flag=t3[3]
+	local table1={}
+	s1="class"
+	if flag then
+		s1=flag
+	end
+	table1[s1]=rule
+	return function()
+		aweror.run_or_raise(cmd,table1)
+	end
 end
 
 function aweror.genkeys(mod1)
-  rorkeys = awful.util.table.join()
-  for i,v in pairs(allt1) do
-    modifier=""
-    if i:len() > 1 then
-      modifier=i:sub(1, i:find("-")-1)
-      i=i:sub(-1,-1)
-    end
-    rorkeys = awful.util.table.join(rorkeys,
-      awful.key({ mod1, modifier}, i, genfun(v)))
-  end
-  return rorkeys
+	rorkeys = awful.util.table.join()
+	for i,v in pairs(allt1) do
+		modifier=""
+		if i:len() > 1 then
+			modifier=i:sub(1, i:find("-")-1)
+			i=i:sub(-1,-1)
+		end
+		rorkeys = awful.util.table.join(rorkeys,
+		awful.key({ mod1, modifier}, i, genfun(v)))
+	end
+	return rorkeys
 end
 
 return aweror
