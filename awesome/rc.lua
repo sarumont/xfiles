@@ -141,7 +141,7 @@ tyrannical.tags = {
 
 -- Ignore the tag "exclusive" property for the following clients (matched by classes)
 tyrannical.properties.intrusive = {
-	"feh", "elicit", "gitk", "java-lang-Thread", "rox-filer", "MPlayer", "Screen Ruler", "xterm"
+	"feh", "elicit", "gitk", "java-lang-Thread", "rox-filer", "MPlayer", "Screen Ruler", "xterm", "UXTerm"
 }
 
 -- Ignore the tiled layout for the matching clients
