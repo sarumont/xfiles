@@ -1,6 +1,6 @@
 #!/bin/sh
 
-syndaemon -t -k -i 2 &
+syndaemon -i 1 &
 exec setxkbmap -option ctrl:nocaps &
 exec xscreensaver &
 exec xset r rate 250 100 &
