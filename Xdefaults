@@ -10,7 +10,7 @@ Xft.rgba: rgb
 
 ! xterm
 *faceName: SourceCodeProForPowerline
-*faceSize: 8
+*faceSize: 10
 
 *ttyModes: erase 
 *backarrowKey: false
@@ -27,7 +27,7 @@ URxvt*cutchars: ;()*,<>[]{}|│┤├"'
 
 !URxvt*letterSpace: -2
 !URxvt*font: xft:PowerlineSymbols,xft:SourceCodePro:pixelsize=11
-URxvt*font: xft:SourceCodeProForPowerline:pixelsize=10
+URxvt*font: xft:SourceCodeProForPowerline:pixelsize=11
 !URxvt*boldFont: xft:SourceCodePro:bold:pixelsize=11
 !URxvt*italicFont: xft:SourceCodePro:italic:pixelsize=11
 !URxvt*boldItalicFont: xft:SourceCodePro:BoldItalic:pixelsize=11
