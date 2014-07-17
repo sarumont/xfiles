@@ -167,7 +167,11 @@ tyrannical.settings.group_children = true --Force popups/dialogs to have the sam
 -- Wibox
 --
 function format_freq(widget, args)
-	return string.format("%04d ", args[1])
+	if type(args[1]) == "number" then
+		return string.format("%04d ", args[1])
+	else
+		return string.format("%s ", args[1])
+	end
 end
 
 -- separators
