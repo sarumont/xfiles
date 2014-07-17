@@ -146,7 +146,7 @@ tyrannical.properties.intrusive = {
 
 -- Ignore the tiled layout for the matching clients
 tyrannical.properties.floating = {
-	"feh", "elicit", "gitk", "java-lang-Thread", "rox-filer", "MPlayer", "Screen Ruler"
+	"feh", "elicit", "gitk", "java-lang-Thread", "rox-filer", "MPlayer", "Screen Ruler", "Steam"
 }
 
 -- Make the matching clients (by classes) on top of the default layout
