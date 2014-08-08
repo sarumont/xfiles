@@ -424,6 +424,8 @@ globalkeys = awful.util.table.join(
     awful.key({}, "XF86AudioPrev", function () awful.util.spawn( "mpc prev" ) end ),
     awful.key({}, "XF86AudioNext", function () awful.util.spawn( "mpc next" ) end ),
     awful.key({}, "XF86AudioPlay", function () awful.util.spawn( "mpc toggle" ) end ),
+    awful.key({}, "XF86KbdBrightnessUp", function () awful.util.spawn( "kb_backlight up" ) end ),
+    awful.key({}, "XF86KbdBrightnessDown", function () awful.util.spawn( "kb_backlight down" ) end ),
     --awful.key({}, "XF86AudioMute", function () awful.util.spawn( "amixer set Capture toggle" ) end ),
 
 	awful.key({modkey}, "=", function () 
