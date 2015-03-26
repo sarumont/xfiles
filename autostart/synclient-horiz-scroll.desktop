@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=synclient
+GenericName=File Synchronizer
+Exec=/usr/bin/synclient HorizTwoFingerScroll=1
+Terminal=false
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true
