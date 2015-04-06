@@ -530,9 +530,14 @@ client.connect_signal("manage", function (c, startup)
     end
 
     local titlebars_enabled = 
-			("Wine" ~= c.class) and 
-			("Screenruler" ~= c.class) and
-			(awful.client.floating.get( c ) or "ConversationsWindow" == c.role)
+			("Wine" == c.class) or
+			("crx_fhbjgbiflinjbdggehcddcbncdddomop" == c.instance) or
+			("Screenruler" == c.class) or
+			("ConversationsWindow" == c.role) or
+			awful.client.floating.get(c)
+
+	print("Titlebars for ", c.class, ": ", titlebars_enabled)
+
     if titlebars_enabled and (c.type == "normal" or c.type == "dialog") then
         -- buttons for the titlebar
         local buttons = awful.util.table.join(
