@@ -86,28 +86,26 @@ tyrannical.tags = {
         init = true,
         exclusive = true,
         layout = awful.layout.suit.max.fullscreen,
-        class = {"Eclipse", "jetbrains.idea", "jetbrains-android-studio"},
 		instance = {"dev"}
     },
     {
+        name = "ide",
+        init = true,
+        exclusive = true,
+        layout = awful.layout.suit.max.fullscreen,
+        class = {"Eclipse", "jetbrains-idea", "jetbrains-android-studio"}
+    },
+    {
         name = "main",
-        init = false,
+        init = true,
         exclusive = false,
         layout = awful.layout.suit.max,
         class = {"Thunderbird"},
         instance = {"main"}
     },
     {
-        name        = "term",                 -- Call the tag "Term"
-        init        = false,                   -- Load the tag on startup
-        exclusive   = true,                   -- Refuse any other type of clients (by classes)
-        screen      = {1,2},                  -- Create this tag on screen 1 and screen 2
-        layout      = awful.layout.suit.tile, -- Use the tile layout
-        class       = {"xterm", "urxvt", "aterm", "URxvt", "XTerm"}
-    } ,
-    {
         name        = "web",
-        init        = false,
+        init        = true,
         exclusive   = false,
         screen      = screen.count(),
         layout      = awful.layout.suit.tile,

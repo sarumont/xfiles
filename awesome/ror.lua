@@ -14,6 +14,7 @@ table5={
    ["g"]={"google-chrome", "Google-chrome"}, 
    ["f"]={"firefox", "^Firefox$"}, 
    ["t"]={"thunderbird", "^Thunderbird$"}, 
+   ["i"]={"/opt/idea/bin/idea.sh", "jetbrains-idea"}, 
    ["d"]={"/home/sarumont/.dotfiles/bin/st-term -c dev -e tmux_attach dev", "dev", "instance"},
    ["m"]={"/home/sarumont/.dotfiles/bin/st-term -c main -e tmux_attach main", "main", "instance"},
 
