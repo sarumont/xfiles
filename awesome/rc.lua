@@ -166,7 +166,7 @@ tyrannical.settings.group_children = true --Force popups/dialogs to have the sam
 --
 function format_freq(widget, args)
 	if type(args[1]) == "number" then
-		return string.format("%04d ", args[1])
+		return string.format("%0.1f ", args[1]/1000)
 	else
 		return string.format("%s ", args[1])
 	end
