@@ -91,7 +91,7 @@ tyrannical.tags = {
     {
         name = "ide",
         init = true,
-        exclusive = true,
+        exclusive = false,
         layout = awful.layout.suit.max.fullscreen,
         class = {"Eclipse", "jetbrains-idea", "jetbrains-android-studio"}
     },
@@ -126,7 +126,8 @@ tyrannical.tags = {
 		layout = awful.layout.suit.tile,
 		nmaster = 1,
 		mwfact = 0.20,
-		class = { "Skype" }
+		class = { "Skype" },
+		instance = {"vertiscale.slack.com__messages"}
 	},
     {
         name = "office",
@@ -530,6 +531,7 @@ client.connect_signal("manage", function (c, startup)
     local titlebars_enabled = 
 			("Wine" == c.class) or
 			("crx_fhbjgbiflinjbdggehcddcbncdddomop" == c.instance) or
+			("vertiscale.slack.com__messages" == c.instance) or
 			("Screenruler" == c.class) or
 			("ConversationsWindow" == c.role) or
 			awful.client.floating.get(c)
@@ -581,8 +583,18 @@ client.connect_signal("manage", function (c, startup)
     end
 end)
 
-client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+client.connect_signal(
+	"focus",
+	function(c)
+		c.border_color = beautiful.border_focus
+		c.opacity = 1
+	end)
+client.connect_signal(
+	"unfocus",
+	function(c)
+		c.border_color = beautiful.border_normal
+		c.opacity = 0.7
+	end)
 -- }}}
 --
 --awful.util.spawn_with_shell("/home/sarumont/.dotfiles/bin/dex -a -e Awesome")
